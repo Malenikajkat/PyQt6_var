@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExportDialog</class>
+ <widget class="QDialog" name="ExportDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>540</width><height>440</height></rect>
+  </property>
+  <property name="minimumSize">
+   <size><width>500</width><height>400</height></size>
+  </property>
+  <property name="windowTitle"><string>Экспорт данных</string></property>
+  <layout class="QVBoxLayout" name="mainLayout" stretch="0,0,0,1,0">
+   <property name="leftMargin"><number>16</number></property>
+   <property name="topMargin"><number>16</number></property>
+   <property name="rightMargin"><number>16</number></property>
+   <property name="bottomMargin"><number>14</number></property>
+   <property name="spacing"><number>10</number></property>
+   <item>
+    <widget class="QGroupBox" name="grpFormat">
+     <property name="title"><string>Формат файла</string></property>
+     <layout class="QVBoxLayout" name="formatLayout">
+      <property name="spacing"><number>8</number></property>
+      <item>
+       <widget class="QRadioButton" name="rbtCSV">
+        <property name="text"><string>CSV — таблица, открывается в Excel</string></property>
+        <property name="checked"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbtJSON">
+        <property name="text"><string>JSON — данные со структурой</string></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpContent">
+     <property name="title"><string>Что выгружать</string></property>
+     <layout class="QVBoxLayout" name="contentLayout">
+      <property name="spacing"><number>8</number></property>
+      <item>
+       <widget class="QCheckBox" name="chkVacancies">
+        <property name="text"><string>Список вакансий</string></property>
+        <property name="checked"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="chkStatistics">
+        <property name="text"><string>Статистика</string></property>
+        <property name="checked"><bool>true</bool></property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="periodLayout" stretch="0,1,0,1">
+        <property name="spacing"><number>8</number></property>
+        <item>
+         <widget class="QLabel" name="lblPeriod">
+          <property name="text"><string>Период статистики: с</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateFrom">
+          <property name="calendarPopup"><bool>true</bool></property>
+          <property name="displayFormat"><string>dd.MM.yyyy</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblPeriodTo">
+          <property name="text"><string>по</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateTo">
+          <property name="calendarPopup"><bool>true</bool></property>
+          <property name="displayFormat"><string>dd.MM.yyyy</string></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpFile">
+     <property name="title"><string>Файл экспорта</string></property>
+     <layout class="QHBoxLayout" name="fileLayout" stretch="1,0">
+      <property name="spacing"><number>8</number></property>
+      <item>
+       <widget class="QLineEdit" name="edtPath"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBrowse">
+        <property name="text"><string>Обзор…</string></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="stretch"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonsLayout" stretch="1,0">
+     <property name="spacing"><number>10</number></property>
+     <item>
+      <widget class="QWidget" name="btnStretch"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="buttonsInner" stretch="0,0">
+       <property name="spacing"><number>10</number></property>
+       <item>
+        <widget class="QPushButton" name="btnExport">
+         <property name="text"><string>Экспортировать</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCancel">
+         <property name="text"><string>Отмена</string></property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

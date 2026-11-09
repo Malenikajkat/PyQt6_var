@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1100</width><height>680</height></rect>
+  </property>
+  <property name="windowTitle"><string>Вакансии — трекер откликов</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout" stretch="0,0,1">
+    <property name="leftMargin"><number>14</number></property>
+    <property name="topMargin"><number>12</number></property>
+    <property name="rightMargin"><number>14</number></property>
+    <property name="bottomMargin"><number>12</number></property>
+    <property name="spacing"><number>10</number></property>
+    <item>
+     <layout class="QHBoxLayout" name="topLayout" stretch="0,1,0,0">
+      <property name="spacing"><number>8</number></property>
+      <item>
+       <widget class="QLabel" name="lblTitle">
+        <property name="text"><string>Вакансии</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="topStretch"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblFilter">
+        <property name="text"><string>Статус:</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cmbFilter">
+        <property name="minimumSize"><size><width>160</width><height>0</height></size></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="btnLayout" stretch="0,0,0,1,0,0">
+      <property name="spacing"><number>8</number></property>
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="text"><string>+ Вакансия</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEdit">
+        <property name="text"><string>Редактировать</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="text"><string>Удалить</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="btnStretch"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnStats">
+        <property name="text"><string>Статистика</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExport">
+        <property name="text"><string>Экспорт</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="childrenCollapsible"><bool>false</bool></property>
+      <widget class="QGroupBox" name="grpJobs">
+       <property name="minimumSize"><size><width>430</width><height>0</height></size></property>
+       <property name="title"><string>Список вакансий</string></property>
+       <layout class="QVBoxLayout" name="jobsLayout">
+        <item>
+         <widget class="QTableWidget" name="tableJobs">
+          <property name="alternatingRowColors"><bool>true</bool></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="rightPanel">
+       <property name="minimumSize"><size><width>320</width><height>0</height></size></property>
+       <layout class="QVBoxLayout" name="rightLayout">
+        <property name="spacing"><number>10</number></property>
+        <property name="leftMargin"><number>0</number></property>
+        <property name="topMargin"><number>0</number></property>
+        <property name="rightMargin"><number>0</number></property>
+        <property name="bottomMargin"><number>0</number></property>
+        <item>
+         <widget class="QGroupBox" name="grpReminders">
+          <property name="title"><string>Напоминания</string></property>
+          <layout class="QVBoxLayout" name="remLayout">
+           <item>
+            <widget class="QListWidget" name="listReminders"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="grpNotes">
+          <property name="title"><string>Заметки по этапам</string></property>
+          <layout class="QVBoxLayout" name="notesLayout">
+           <property name="spacing"><number>8</number></property>
+           <item>
+            <widget class="QListWidget" name="listNotes"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="notesBtnLayout" stretch="0,0,0,1">
+             <property name="spacing"><number>8</number></property>
+             <item>
+              <widget class="QDateEdit" name="dateNote">
+               <property name="calendarPopup"><bool>true</bool></property>
+               <property name="displayFormat"><string>dd.MM.yyyy</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnNoteAdd">
+               <property name="text"><string>+ Заметка</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnNoteDel">
+               <property name="text"><string>Удалить</string></property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="noteStretch"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
